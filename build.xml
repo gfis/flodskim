@@ -2,6 +2,7 @@
 <!--
     ant-buildfile for commandline, web application and web service
     @(#) $Id: build.xml 304 2009-12-04 07:54:19Z gfis $
+    2016-09-03: core.jar
     2014-11-11: tomcat.base|home extracted from build-import.xml
     2013-11-05: copied from numword
 -->
@@ -28,6 +29,9 @@
     <import file="build-import.xml" />
 
     <target name="generate">
+    </target>
+
+    <target name="core.jar">
     </target>
 
     <target name="test" depends="deploy,test.command,test.servlet,test.service" />
