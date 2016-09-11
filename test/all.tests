@@ -1,0 +1,23 @@
+# Collection of Testcases for flodskim
+# @(#) $Id$
+# 2016-09-11, Dr. Georg Fischer: copied from ramath
+#-----------------------------------
+# Caution:
+# (1) Adjust the following line: URL where FloDskIm was deployed
+URL=http://localhost:8080/flodskim/servlet
+# (2) Adjust the following line: default commandline arguments
+ARGS=
+#======================================================================
+PACKAGE=org.teherba.flodskim
+FILE=test/bsm100.tett2.dsk
+BLOCK=0
+
+TEST VS01 
+CALL Main -buffer dsk -read $(FILE) -system ta-vs -dir
+#--------
+TEST RX01
+CALL Main -buffer dsk  -read test/escu/escu1.dsk -system dec-rx50 -block $(BLOCK)
+
+TEST RX02
+CALL Main -buffer dsk  -read test/escu/escu2.dsk -system dec-rx50 -block $(BLOCK)
+

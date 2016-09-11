@@ -2,6 +2,7 @@
 <!--
     ant-buildfile for commandline, web application and web service
     @(#) $Id: build.xml 304 2009-12-04 07:54:19Z gfis $
+    2016-09-11: fill.lib
     2016-09-03: core.jar
     2014-11-11: tomcat.base|home extracted from build-import.xml
     2013-11-05: copied from numword
@@ -32,6 +33,17 @@
     </target>
 
     <target name="core.jar">
+    </target>
+
+    <target name="fill.lib">
+        <copy todir="${lib.home}">
+            <fileset dir="${tomcat.base}/openlib">
+								<include name="common-core.jar" />
+								<include name="commons-fileupload-1.2.2.jar" />
+                <include name="commons-io-2.1.jar" />
+								<include name="log4j-1.2.17.jar" />
+            </fileset>
+        </copy>
     </target>
 
     <target name="test" depends="deploy,test.command,test.servlet,test.service" />
