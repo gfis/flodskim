@@ -1,5 +1,6 @@
 /*  Class for a DEC CP/M file system structure on RX50 floppy disks SS DD 80 tracks
     @(#) $Id: Main.java 820 2011-11-07 21:59:07Z gfis $
+    2017-05-29: javadoc 1.8
     2013-11-07, Georg Fischer: copied from BaseSystem
 */
 /*
@@ -28,7 +29,7 @@ import  org.apache.log4j.Logger;
 public class Dec_rx50 extends Cpm {
     public final static String CVSID = "@(#) $Id: Dec_rx50.java 852 2012-01-06 08:07:08Z gfis $";
 
-    /** whether to write debugging output (iff > 0) */
+    /** whether to write debugging output (iff &gt; 0) */
     protected final static int debug = 0;
 
     /** log4j logger (category) */

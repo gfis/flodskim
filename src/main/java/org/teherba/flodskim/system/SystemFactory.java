@@ -1,5 +1,6 @@
 /*  Selects the applicable subclass of BaseSystem
     @(#) $Id: SystemFactory.java 657 2011-03-17 07:56:38Z gfis $
+    2017-05-29: javadoc 1.8
     2013-11-05, Georg Fischer
 */
 /*
@@ -86,9 +87,10 @@ public class SystemFactory {
         return instances.size();
     } // getCount
 
-    /** Determines whether code denotes and instance
+    /** Determines whether code denotes an instance
      *  @param instance the instance to be tested
      *  @param code code for the desired instance
+     *  @return whether the code can handle the specified instance
      */
     public boolean isApplicable(BaseSystem instance, String code) {
         boolean result = false;
@@ -103,7 +105,7 @@ public class SystemFactory {
 
     /** Gets the applicable instance for a specified code,
      *  and {@link BaseSystem#initialize} it
-     *  @param code code for the instancce
+     *  @param code code for the instance
      *  @return the instance for that code, or <em>null</em> if the
      *  code was not found
      */

@@ -1,5 +1,6 @@
 /*  Class for the file system structure of Triumph-Adler VS20 and BSM100
     @(#) $Id: Main.java 820 2011-11-07 21:59:07Z gfis $
+    2017-05-29: javadoc 1.8
     2013-11-07, Georg Fischer: copied from BaseSystem
 */
 /*
@@ -31,7 +32,7 @@ import  org.apache.log4j.Logger;
 public class Ta_vs extends BaseSystem {
     public final static String CVSID = "@(#) $Id: Ta_vs.java 852 2012-01-06 08:07:08Z gfis $";
 
-    /** whether to write debugging output (iff > 0) */
+    /** whether to write debugging output (iff &gt; 0) */
     protected final static int debug = 0;
 
     /** log4j logger (category) */
@@ -209,7 +210,7 @@ public class Ta_vs extends BaseSystem {
    420: 41 64 72 2e 47 65 62 69 65 74 73 67 65 2e 20 20  Adr.Gebietsge.
    430: 5a 1c     1  7  8 89                             Z...............
    440: 44 6f 6c 6d 65 74 73 63 68 65 72 20 20 20 20 20  Dolmetscher
-   450: 5a 26     1  7  8 89                             Z&..............
+   450: 5a 26     1  7  8 89                             Z&amp;..............
    460: 4c 69 73 74 65 20 57 65 63 68 73 65 6c 20 47 65  Liste Wechsel Ge
    470: 5a 2c        7  8 89                             Z,..............
    480:                                                  ................
@@ -268,7 +269,7 @@ public class Ta_vs extends BaseSystem {
    200: ca  7  2     1 20 33 ff  8    83  c d7 ff a5 ff  ..... 3.........
    210: 71 ff 12 ff ab ff 16 ff 18 ff 1a ff  f ff 1e     q...............
    220: 20    22    d5 1d 63  9 8b  3 83 ff df  f 2e ff   ."...c.........
-   230: 30 ff bd ff 34 ff 36 ff 81 ff 6b ff 3c ff 3e ff  0...4.6...k.<.>.
+   230: 30 ff bd ff 34 ff 36 ff 81 ff 6b ff 3c ff 3e ff  0...4.6...k.&lt;.&gt;.
    240: fb ff 42 ff 44 ff  f ff 48 ff 49 ff 37 ff 41 ff  ..B.D...H.I.7.A.
    250: 7f ff 7d ff 7f 17 ff ff ff ff ff ff ff ff ff ff  ..}.............
    260: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff  ................

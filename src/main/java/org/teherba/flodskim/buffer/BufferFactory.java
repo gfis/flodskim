@@ -1,5 +1,6 @@
 /*  Selects the applicable subclass of BaseBuffer
     @(#) $Id: BufferFactory.java 657 2011-03-17 07:56:38Z gfis $
+    2017-05-29: javadoc 1.8
     2013-11-05, Georg Fischer
 */
 /*
@@ -86,6 +87,7 @@ public class BufferFactory {
     /** Determines whether code denotes and instance
      *  @param instance the instance to be tested
      *  @param code code for the desired instance
+     *  @return whether code can handle the specified instance
      */
     public boolean isApplicable(BaseBuffer instance, String code) {
         boolean result = false;
@@ -100,7 +102,7 @@ public class BufferFactory {
 
     /** Gets the applicable instance for a specified code,
      *  and {@link BaseBuffer#initialize} it
-     *  @param code code for the instancce
+     *  @param code code for the instance
      *  @return the instance for that code, or <em>null</em> if the
      *  code was not found
      */

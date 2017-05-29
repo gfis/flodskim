@@ -1,5 +1,6 @@
 /*  Class for a buffer for the (e)DSK disk image container format
     @(#) $Id: Main.java 820 2011-11-07 21:59:07Z gfis $
+    2017-05-29: javadoc 1.8
     2013-11-05, Georg Fischer
 
     c.f. http://web.archive.org/web/20090107021455/http://www.kjthacker.f2s.com/docs/dsk.html
@@ -27,14 +28,13 @@ import  org.apache.log4j.Logger;
 /** Base class for a byte buffer for the DSK disk image container
  *  defining common properties and methods. The container format
  *  is described in an
- *  {@link <a href="http://web.archive.org/web/20090107021455/http://www.kjthacker.f2s.com/docs/dsk.html">outdated
- *  document for CPCEMU</a>}.
+ *  <a href="http://web.archive.org/web/20090107021455/http://www.kjthacker.f2s.com/docs/dsk.html">outdated document for CPCEMU</a>.
  *  @author Dr. Georg Fischer
  */
 public class DskBuffer extends BaseBuffer {
     public final static String CVSID = "@(#) $Id: BaseBuffer.java 852 2012-01-06 08:07:08Z gfis $";
 
-    /** whether to write debugging output (iff > 0) */
+    /** whether to write debugging output (iff &gt; 0) */
     protected final static int debug = 0;
 
     /** log4j logger (category) */

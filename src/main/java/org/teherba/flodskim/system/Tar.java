@@ -1,5 +1,6 @@
 /*  Class for a Unix tar archive structure
     @(#) $Id: Main.java 820 2011-11-07 21:59:07Z gfis $
+    2017-05-29: javadoc 1.8
     2014-12-04, Georg Fischer: copied from Cpm
 */
 /*
@@ -33,7 +34,7 @@ import  org.apache.log4j.Logger;
 public class Tar extends BaseSystem {
     public final static String CVSID = "@(#) $Id: Tar.java 852 2012-01-06 08:07:08Z gfis $";
 
-    /** whether to write debugging output (iff > 0) */
+    /** whether to write debugging output (iff &gt; 0) */
     protected final static int debug = 0;
 
     /** log4j logger (category) */

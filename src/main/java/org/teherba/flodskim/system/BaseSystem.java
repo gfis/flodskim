@@ -1,5 +1,6 @@
 /*  Class for a file system structure in a buffer for a disk image container
     @(#) $Id: Main.java 820 2011-11-07 21:59:07Z gfis $
+    2017-05-29: javadoc 1.8
     2013-11-07, Georg Fischer: copied from BaseBuffer
 
     Data can currently only be read from a file into a buffer,
@@ -35,7 +36,7 @@ import  org.apache.log4j.Logger;
 public class BaseSystem {
     public final static String CVSID = "@(#) $Id: BaseSystem.java 852 2012-01-06 08:07:08Z gfis $";
 
-    /** whether to write debugging output (iff > 0) */
+    /** whether to write debugging output (iff &gt; 0) */
     protected final static int debug = 0;
 
     /** log4j logger (category) */
@@ -337,6 +338,7 @@ public class BaseSystem {
     /** Write one block to the target file
      *  @param byteWriter open writer for the target file
      *  @param blockNo number of block to be written
+     *  @param remainingSize number of free bytes in buffer
      *  @return new remaining size to be written
      */
     public int writeBlock(BufferedOutputStream byteWriter, int blockNo, int remainingSize) {

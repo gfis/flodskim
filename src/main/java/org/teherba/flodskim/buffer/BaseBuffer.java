@@ -1,5 +1,6 @@
 /*  Class for a buffer for some disk image container
     @(#) $Id: Main.java 820 2011-11-07 21:59:07Z gfis $
+    2017-05-29: javadoc 1.8
     2013-11-05, Georg Fischer: copied from basdetok.BaseBuffer
 
     Data can currently only be read from a file into a buffer,
@@ -35,14 +36,14 @@ import  org.apache.log4j.Logger;
 
 /** Base class for a byte buffer for some disk image container,
  *  defining common properties and methods.
- *  The {@link <a href="http://simonowen.com/samdisk">SAMdisk documentation</a>}
+ *  The <a href="http://simonowen.com/samdisk">SAMdisk documentation</a>
  *  lists a series of possible container formats.
  *  @author Dr. Georg Fischer
  */
 public class BaseBuffer {
     public final static String CVSID = "@(#) $Id: BaseBuffer.java 852 2012-01-06 08:07:08Z gfis $";
 
-    /** whether to write debugging output (iff > 0) */
+    /** whether to write debugging output (iff &gt; 0) */
     protected final static int debug = 0;
 
     /** log4j logger (category) */
@@ -394,6 +395,8 @@ public class BaseBuffer {
 
     /** Gets some integer value from a buffer position, in little endian mode,
      *  starting at some position.
+     *  @param buffer buffer where to read
+     *  @param bufferPos position of byte to be read
      *  @return a Java integer
      */
     public static int getLsb2(byte[] buffer, int bufferPos) {
@@ -412,6 +415,8 @@ public class BaseBuffer {
 
     /** Gets some integer value from a buffer position, in big endian mode,
      *  starting at some position.
+     *  @param buffer buffer where to read
+     *  @param bufferPos position of byte to be read
      *  @return a Java integer
      */
     public static int getMsb2(byte[] buffer, int bufferPos) {

@@ -1,5 +1,6 @@
 /*  Read and Process (Floppy) Disk Image Formats
     @(#) $Id: Servlet.java 820 2011-11-07 21:59:07Z gfis $
+    2017-05-29: javadoc 1.8
     2013-11-05, Dr. Georg Fischer: copied from numword
 
     Caution, only a stub, not tested!
@@ -49,7 +50,7 @@ public class Servlet extends HttpServlet {
     /** Called by the servlet container to indicate to a servlet
      *  that the servlet is being placed into service.
      *  @param config object containing the servlet's configuration and initialization parameters
-     *  @throws ServletException
+     *  @throws ServletException for Servlet errors
      */
     public void init(ServletConfig config) throws ServletException {
         super.init(config); // ???
@@ -60,7 +61,7 @@ public class Servlet extends HttpServlet {
     /** Creates the response for a HTTP GET request.
      *  @param request fields from the client input form
      *  @param response data to be sent back the user's browser
-     *  @throws IOException
+     *  @throws IOException for IO errors
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         generateResponse(request, response);
@@ -69,7 +70,7 @@ public class Servlet extends HttpServlet {
     /** Creates the response for a HTTP POST request.
      *  @param request fields from the client input form
      *  @param response data to be sent back the user's browser
-     *  @throws IOException
+     *  @throws IOException for IO errors
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         generateResponse(request, response);
@@ -91,7 +92,7 @@ public class Servlet extends HttpServlet {
     /** Creates the response for a HTTP GET or POST request.
      *  @param request fields from the client input form
      *  @param response data to be sent back the user's browser
-     *  @throws IOException
+     *  @throws IOException for IO errors
      */
     public void generateResponse(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
