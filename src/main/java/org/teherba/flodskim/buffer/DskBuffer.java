@@ -23,7 +23,8 @@
  */
 package org.teherba.flodskim.buffer;
 import  org.teherba.flodskim.buffer.BaseBuffer;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Base class for a byte buffer for the DSK disk image container
  *  defining common properties and methods. The container format
@@ -47,7 +48,7 @@ public class DskBuffer extends BaseBuffer {
      */
     public DskBuffer() {
         super();
-        log = Logger.getLogger(DskBuffer.class.getName());
+        log = LogManager.getLogger(DskBuffer.class.getName());
         setCode("dsk");
         setDescription("(Extendend) Disk Image");
     } // Constructor(0)

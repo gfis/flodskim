@@ -23,7 +23,8 @@ import  org.teherba.flodskim.buffer.BaseBuffer;
 import  org.teherba.flodskim.system.BaseSystem;
 import  org.teherba.flodskim.system.DirectoryEntry;
 import  java.io.BufferedOutputStream;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Common methods for derivatives of the CP/M system (Digital Research)
  *  @author Dr. Georg Fischer
@@ -43,7 +44,7 @@ public class Cpm extends BaseSystem {
     /** Constructor with no arguments, no heavy-weight operations.
      */
     public Cpm() {
-        log = Logger.getLogger(Cpm.class.getName());
+        log = LogManager.getLogger(Cpm.class.getName());
         setCode("cpm");
         setDescription("CP/M (Digital Research)");
     } // Constructor(0)

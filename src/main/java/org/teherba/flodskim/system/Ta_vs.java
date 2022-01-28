@@ -23,7 +23,8 @@ import  org.teherba.flodskim.buffer.BaseBuffer;
 import  org.teherba.flodskim.system.BaseSystem;
 import  org.teherba.flodskim.system.DirectoryEntry;
 import  java.io.BufferedOutputStream;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Common methods for file system structure of Triumph-Adler VS20 and BSM100,
  *  see <a href="https://de.wikipedia.org/wiki/Triumph-Adler#Bildschirmschreibsysteme">Wikipedia (de)</a>
@@ -44,7 +45,7 @@ public class Ta_vs extends BaseSystem {
     /** Constructor with no arguments, no heavy-weight operations.
      */
     public Ta_vs() {
-        log = Logger.getLogger(Ta_vs.class.getName());
+        log = LogManager.getLogger(Ta_vs.class.getName());
         setCode("ta-vs");
         setDescription("TA VS20, BSM100");
     } // Constructor(0)

@@ -20,7 +20,8 @@
  */
 package org.teherba.flodskim.system;
 import  org.teherba.flodskim.system.Tar;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Sinix tar archive structure on MX-2 floppy disks DS DD 80 tracks
  *  @author Dr. Georg Fischer
@@ -40,7 +41,7 @@ public class Sinix_mx2 extends Tar {
     /** Constructor with no arguments, no heavy-weight operations.
      */
     public Sinix_mx2() {
-        log = Logger.getLogger(Sinix_mx2.class.getName());
+        log = LogManager.getLogger(Sinix_mx2.class.getName());
         setCode("sinix-mx2");
         setDescription("Sinix tar MX-2");
     } // Constructor(0)

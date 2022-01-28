@@ -23,7 +23,8 @@ import  org.teherba.flodskim.system.BaseSystem;
 import  java.util.ArrayList;
 import  java.util.Iterator;
 import  java.util.StringTokenizer;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** List of subclasses of {@link BaseSystem},
  *  with an iterator and access method.
@@ -58,7 +59,7 @@ public class SystemFactory {
      *  The order of the file extensions here defines the order in the user interfaces.
      */
     public SystemFactory() {
-        log = Logger.getLogger(SystemFactory.class.getName());
+        log = LogManager.getLogger(SystemFactory.class.getName());
         try {
             instances = new ArrayList<BaseSystem>(64);
             addInstance("base"		, "BaseSystem");

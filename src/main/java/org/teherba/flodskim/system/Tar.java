@@ -26,7 +26,8 @@ import  java.io.BufferedOutputStream;
 import  java.io.File;
 import  java.io.FileOutputStream;
 import  java.util.Iterator;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Common methods for derivatives of the CP/M system (Digital Research)
  *  @author Dr. Georg Fischer
@@ -46,7 +47,7 @@ public class Tar extends BaseSystem {
     /** Constructor with no arguments, no heavy-weight operations.
      */
     public Tar() {
-        log = Logger.getLogger(Tar.class.getName());
+        log = LogManager.getLogger(Tar.class.getName());
         setCode("tar");
         setDescription("Unix tar archive");
     } // Constructor(0)

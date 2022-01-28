@@ -32,7 +32,8 @@ import  java.io.PrintWriter;
 import  java.nio.channels.Channels;
 import  java.nio.channels.ReadableByteChannel;
 import  java.nio.channels.WritableByteChannel;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Base class for a byte buffer for some disk image container,
  *  defining common properties and methods.
@@ -55,7 +56,7 @@ public class BaseBuffer {
     /** Constructor with no arguments, no heavy-weight operations.
      */
     public BaseBuffer() {
-        log = Logger.getLogger(BaseBuffer.class.getName());
+        log = LogManager.getLogger(BaseBuffer.class.getName());
         setCode("base");
         setDescription("Raw Container File");
     } // Constructor(0)

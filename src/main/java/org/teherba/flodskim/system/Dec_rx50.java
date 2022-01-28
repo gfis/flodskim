@@ -20,7 +20,8 @@
  */
 package org.teherba.flodskim.system;
 import  org.teherba.flodskim.system.Cpm;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** DEC CP/M file system structure on RX50 floppy disks SS DD 80 tracks,
  *  for the DEC Rainbow 100
@@ -41,7 +42,7 @@ public class Dec_rx50 extends Cpm {
     /** Constructor with no arguments, no heavy-weight operations.
      */
     public Dec_rx50() {
-        log = Logger.getLogger(Dec_rx50.class.getName());
+        log = LogManager.getLogger(Dec_rx50.class.getName());
         setCode("dec-rx50");
         setDescription("DEC CP/M RX50 (Rainbow 100)");
     } // Constructor(0)

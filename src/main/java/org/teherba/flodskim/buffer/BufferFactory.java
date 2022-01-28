@@ -23,7 +23,8 @@ import  org.teherba.flodskim.buffer.BaseBuffer;
 import  java.util.ArrayList;
 import  java.util.Iterator;
 import  java.util.StringTokenizer;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** List of subclasses of {@link BaseBuffer},
  *  with an iterator and access method.
@@ -58,7 +59,7 @@ public class BufferFactory {
      *  The order of the file extensions here defines the order in the user interfaces.
      */
     public BufferFactory() {
-        log = Logger.getLogger(BufferFactory.class.getName());
+        log = LogManager.getLogger(BufferFactory.class.getName());
         try {
             instances = new ArrayList<BaseBuffer>(64);
             addInstance("base"  , "BaseBuffer");

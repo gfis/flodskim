@@ -27,7 +27,8 @@ import  org.teherba.flodskim.system.DirectoryEntry;
 import  java.io.BufferedOutputStream;
 import  java.io.FileOutputStream;
 import  java.util.Iterator;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Base class for a file system structure stored in a {@link org.teherba.flodskim.buffer.BaseBuffer BaseBuffer}
  *  defining common properties and methods.
@@ -48,7 +49,7 @@ public class BaseSystem {
     /** Constructor with no arguments, no heavy-weight operations.
      */
     public BaseSystem() {
-        log = Logger.getLogger(BaseSystem.class.getName());
+        log = LogManager.getLogger(BaseSystem.class.getName());
         setCode("base");
         setDescription("undefined filesystem");
     } // Constructor(0)

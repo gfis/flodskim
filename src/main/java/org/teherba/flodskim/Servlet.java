@@ -32,7 +32,8 @@ import  javax.servlet.http.HttpServlet;
 import  javax.servlet.http.HttpServletRequest;
 import  javax.servlet.http.HttpServletResponse;
 import  javax.servlet.http.HttpSession;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** This class is the servlet interface to {@link Main},
  *  and ressembles the functionality of the commandline interface
@@ -54,7 +55,7 @@ public class Servlet extends HttpServlet {
      */
     public void init(ServletConfig config) throws ServletException {
         super.init(config); // ???
-        log = Logger.getLogger(Servlet.class.getName());
+        log = LogManager.getLogger(Servlet.class.getName());
         command = new Main();
     } // init
 

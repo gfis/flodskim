@@ -23,7 +23,8 @@ import  org.teherba.flodskim.buffer.BaseBuffer;
 import  org.teherba.flodskim.system.BaseSystem;
 import  java.util.ArrayList;
 import  java.util.Iterator;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Bean properties and methods for a directory entry
  *  @author Dr. Georg Fischer
@@ -43,7 +44,7 @@ public class DirectoryEntry {
     /** Constructor with no arguments
      */
     public DirectoryEntry() {
-        log = Logger.getLogger(DirectoryEntry.class.getName());
+        log = LogManager.getLogger(DirectoryEntry.class.getName());
         blockList = new ArrayList<Integer>(32);
         setBaseFileName("");
         setExtension("");
